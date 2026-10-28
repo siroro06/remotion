@@ -57,6 +57,11 @@ import {EmojiTestbed} from './Emoji';
 import {ErrorOnFrame10} from './ErrorOnFrame10';
 import {UnsymbolicatedErrorOverlayRepro} from './ErrorOverlayE2e/ErrorOverlayRepro';
 import {Expert} from './Expert';
+import {EyesPanel} from './FiveSecManga/EyesPanel';
+import {FiveSecManga} from './FiveSecManga/FiveSecManga';
+import {ImpactPanel} from './FiveSecManga/ImpactPanel';
+import {LinePanel} from './FiveSecManga/LinePanel';
+import {RumblePanel} from './FiveSecManga/RumblePanel';
 import {FontDemo} from './Fonts';
 import {FractionalSequenceVideo} from './FractionalSequenceVideo';
 import {Framer} from './Framer';
@@ -2828,6 +2833,52 @@ export const Index: React.FC = () => {
 				height={1080}
 				fps={30}
 				durationInFrames={270}
+			/>
+			<Folder name="FiveSecManga-Panels">
+				<Composition
+					id="FiveSecManga-Rumble"
+					component={RumblePanel}
+					width={1080}
+					height={1920}
+					fps={30}
+					durationInFrames={150}
+					defaultProps={{points: '56,56 1024,56 1024,470 56,530'}}
+				/>
+				<Composition
+					id="FiveSecManga-Eyes"
+					component={EyesPanel}
+					width={1080}
+					height={1920}
+					fps={30}
+					durationInFrames={132}
+					defaultProps={{points: '56,558 1024,498 1024,798 56,858'}}
+				/>
+				<Composition
+					id="FiveSecManga-Dialogue"
+					component={LinePanel}
+					width={1080}
+					height={1920}
+					fps={30}
+					durationInFrames={114}
+					defaultProps={{points: '56,886 1024,826 1024,1210 56,1150'}}
+				/>
+				<Composition
+					id="FiveSecManga-Impact"
+					component={ImpactPanel}
+					width={1080}
+					height={1920}
+					fps={30}
+					durationInFrames={90}
+					defaultProps={{points: '56,1178 1024,1238 1024,1864 56,1864'}}
+				/>
+			</Folder>
+			<Composition
+				id="FiveSecManga"
+				component={FiveSecManga}
+				width={1080}
+				height={1920}
+				fps={30}
+				durationInFrames={150}
 			/>
 			<Composition
 				id="spring-season"
